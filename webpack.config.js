@@ -1,6 +1,18 @@
+var webpack = require('webpack');
+var path = require('path');
+
+process.env.NODE_ENV = process.env.NODE_ENV || 'development';
+
 module.exports = {
   entry: [
     './src/index.js'
+  ],
+  plugins: [
+    new webpack.optimize.UglifyJsPlugin({
+      compressor: {
+        warnings: false
+      }
+    })
   ],
   output: {
     path: __dirname,
@@ -18,8 +30,5 @@ module.exports = {
   resolve: {
     extensions: ['', '.js', '.jsx']
   },
-  devServer: {
-    historyApiFallback: true,
-    contentBase: './'
-  }
+  devtool: process.env.NODE_ENV === 'production' ? undefined: 'cheap-module-eval-source-map'
 };
