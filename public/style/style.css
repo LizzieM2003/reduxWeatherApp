@@ -3,11 +3,51 @@
 }
 
 td, th {
-  vertical-align: bottom !important;
+  vertical-align: middle !important;
   text-align: center !important;
 }
 
 td:first-of-type, td:first-of-type > div {
   height: 200px;
   width: 250px;
+}
+
+
+.table-responsive
+{
+    overflow-x: auto;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Responsive css */
+@media only screen and (max-width: 900px) {
+  td:first-of-type, td:first-of-type > div {
+    height: 100px;
+    width: 120px;
+  }
+}
+
+@media only screen and (max-width: 690px) {
+  td:first-of-type, td:first-of-type > div {
+    height: 100px;
+    width: 100px;
+  }
+}
+
+@media only screen and (max-width: 452px) {
+  td:first-of-type, td:first-of-type > div {
+    height: 80px;
+    width: 80px;
+  }
+
+  .table tr td {
+    margin: 2px !important;
+    padding: 2px;
+    width: 80px;
+  }
+
 }

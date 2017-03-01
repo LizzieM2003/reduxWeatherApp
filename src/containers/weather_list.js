@@ -29,7 +29,7 @@ class WeatherList extends Component {
 
   render() {
     return (
-      <div className='table-responsive'>
+      <div class="table-responsive">
         <table className='table table-hover'>
           <thead>
             <tr>
